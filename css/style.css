@@ -285,6 +285,12 @@ a {
   border-radius: 50% !important;
   background-color: rgba(255, 255, 255, 0.2) !important;
   transition: var(--tran-0-2) !important;
+  opacity: 0;
+  visibility: visible;
+}
+
+.home:hover .swiper-navBtn {
+  opacity: 1;
 }
 
 .swiper-navBtn:hover {
@@ -303,6 +309,20 @@ a {
 
 .swiper-button-prev {
   left: 16rem !important;
+}
+
+.swiper-pagination-bullet {
+   background-color: var(--white-color) !important;
+   opacity: 1 !important;
+   height: 1.5rem !important;
+   width: 1.5rem !important;
+   margin-bottom: 2rem !important;
+   visibility: hidden;
+}
+
+.swiper-pagination-bullet-active {
+  border: 3px solid var(--white-color);
+  background-color: var(--primary-color) !important;
 }
 
 .home-details{
@@ -328,4 +348,17 @@ a {
   font-size: var(--big-font);
   color: var(--white-color); 
   font-weight: var(--font-semi-bold);
+}
+
+
+
+
+/* Responsive media */ 
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible !important;
+  }
 }
